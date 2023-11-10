@@ -1,0 +1,30 @@
+.icon-toggle {
+  width: auto;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  background-color: #eef1f6;
+  border-radius: 6px;
+
+  .option {
+    padding: 3px 6px;
+    font-size: 22px;
+    border-radius: 3px;
+
+    input {
+      display: none;
+    }
+
+    &.active {
+      background-color: #ffffff;
+    }
+
+    * {
+      font-size: inherit;
+    }
+  }
+}

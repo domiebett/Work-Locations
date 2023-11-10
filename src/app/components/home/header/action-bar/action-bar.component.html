@@ -1,0 +1,20 @@
+<div class="action-bar">
+  <div class="search-container">
+    <app-icon-input
+      name="search"
+      placeHolder="Search"
+      [icon]="searchIcon"
+    ></app-icon-input>
+  </div>
+
+  <div class="view-toggle">
+    <app-icon-toggle
+      [options]="viewToggleOptions"
+      (onChange)="setCurrentView($event)"
+    ></app-icon-toggle>
+  </div>
+  
+  <div class="btn-container">
+    <app-button text="NEW LOCATION" type="primary"></app-button>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100vw;
+  padding: 20px;
+  vertical-align: top;
+
+  .title-bar {
+    .name {
+      font-size: 1.5em;
+    }
+  }
+
+  .action-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+  }
+}

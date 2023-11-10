@@ -1,0 +1,18 @@
+.btn {
+  border: none;
+  padding: 0.9em 3em;
+  border-radius: 6px;
+  &.primary {
+    background-color: #257490;
+    color: white;
+  }
+  &.default {
+    background-color: white;
+    border: 1px solid #f7f7f7;
+    color: #aeafb1;
+  }
+  &.danger {
+    background-color: #e61d1c;
+    color: white;
+  }
+}

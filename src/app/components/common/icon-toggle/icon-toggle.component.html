@@ -1,0 +1,15 @@
+<div class="icon-toggle">
+  <label
+    *ngFor="let option of _options"
+    [ngClass]="{ option: true, active: option.name === selectedOption }"
+  >
+    <fa-icon [icon]="option.icon"></fa-icon>
+    <input
+      type="radio"
+      [(ngModel)]="selectedOption"
+      (ngModelChange)="onToggleChange()"
+      [value]="option.name"
+      [defaultChecked]="option.defaultChecked"
+    />
+  </label>
+</div>
