@@ -5,7 +5,9 @@ import {
   faSearch,
   faTableCells,
 } from '@fortawesome/free-solid-svg-icons';
+import { ActiveViewService } from 'src/app/services/active-view.service';
 import { IconToggleOption } from 'src/app/types/icon-toggle';
+import { LocationView } from 'src/app/types/view';
 
 @Component({
   selector: 'app-action-bar',
@@ -13,14 +15,15 @@ import { IconToggleOption } from 'src/app/types/icon-toggle';
   styleUrls: ['./action-bar.component.scss'],
 })
 export class ActionBarComponent {
-  currentView: string = 'list';
   searchIcon: IconDefinition = faSearch;
   viewToggleOptions: IconToggleOption[] = [
     { name: 'list', icon: faBarsStaggered, defaultChecked: true },
     { name: 'grid', icon: faTableCells },
   ];
 
+  constructor(private activeViewService: ActiveViewService) {}
+
   setCurrentView(currentView: string): void {
-    this.currentView = currentView;
+    this.activeViewService.activeViewChanged.emit(currentView as LocationView);
   }
 }

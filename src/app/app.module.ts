@@ -12,6 +12,7 @@ import { IconInputComponent } from './components/common/icon-input/icon-input.co
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconToggleComponent } from './components/common/icon-toggle/icon-toggle.component';
 import { FormsModule } from '@angular/forms';
+import { ActiveViewService } from './services/active-view.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     IconToggleComponent,
   ],
   imports: [BrowserModule, FontAwesomeModule, FormsModule],
-  providers: [],
+  providers: [ActiveViewService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
