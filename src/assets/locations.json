@@ -1,0 +1,74 @@
+{
+  "locations": [
+    {
+      "name": "New York",
+      "shortName": "NY",
+      "locations": [
+        {
+          "name": "Brooklyn",
+          "shortName": "BK",
+          "locations": [
+            {
+              "name": "Williamsburg",
+              "shortName": "WB",
+              "locations": []
+            },
+            {
+              "name": "Downtown Brooklyn",
+              "shortName": "DB",
+              "locations": []
+            }
+          ]
+        },
+        {
+          "name": "Manhattan",
+          "shortName": "MH",
+          "locations": [
+            {
+              "name": "Upper East Side",
+              "shortName": "UES",
+              "locations": []
+            },
+            {
+              "name": "Chelsea",
+              "shortName": "CH",
+              "locations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "London",
+      "shortName": "LDN",
+      "locations": [
+        {
+          "name": "Westminster",
+          "shortName": "WSM",
+          "locations": []
+        },
+        {
+          "name": "Camden",
+          "shortName": "CMD",
+          "locations": []
+        }
+      ]
+    },
+    {
+      "name": "Tokyo",
+      "shortName": "TKY",
+      "locations": [
+        {
+          "name": "Shinjuku",
+          "shortName": "SKJ",
+          "locations": []
+        },
+        {
+          "name": "Shibuya",
+          "shortName": "SBY",
+          "locations": []
+        }
+      ]
+    }
+  ]
+}

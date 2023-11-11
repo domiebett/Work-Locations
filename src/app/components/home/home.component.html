@@ -1,4 +1,6 @@
 <app-header></app-header>
-
-<app-list-view *ngIf="activeView === 'list'"></app-list-view>
-<app-grid-view *ngIf="activeView === 'grid'"></app-grid-view>
+<hr />
+<div class="app-container">
+  <app-list-view *ngIf="activeView === 'list'"></app-list-view>
+  <app-grid-view *ngIf="activeView === 'grid'"></app-grid-view>
+</div>

@@ -13,6 +13,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconToggleComponent } from './components/common/icon-toggle/icon-toggle.component';
 import { FormsModule } from '@angular/forms';
 import { ActiveViewService } from './services/active-view.service';
+import { LocationsService } from './services/locations.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LocationAccordionComponent } from './components/home/list-view/location-accordion/location-accordion.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,10 @@ import { ActiveViewService } from './services/active-view.service';
     ActionBarComponent,
     IconInputComponent,
     IconToggleComponent,
+    LocationAccordionComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, FormsModule],
-  providers: [ActiveViewService],
+  imports: [BrowserModule, FontAwesomeModule, FormsModule, HttpClientModule],
+  providers: [ActiveViewService, LocationsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

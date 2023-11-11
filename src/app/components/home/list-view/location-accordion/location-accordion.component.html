@@ -1,0 +1,8 @@
+<div class="location-accordion">
+  <span>Name: {{ location.name }}</span>
+  <span>Short Name: {{ location.shortName }}</span>
+  <div *ngIf="location.locations.length" class="child-locations">
+    <app-location-accordion *ngFor="let loc of location.locations" [location]="loc">
+    </app-location-accordion>
+  </div>
+</div>
