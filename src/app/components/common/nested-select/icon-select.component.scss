@@ -1,0 +1,15 @@
+.icon-select {
+  position: relative;
+
+  .options-container {
+    position: absolute;
+    top: 110%;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #dfe2e8;
+    border-radius: 6px;
+    opacity: 0.95;
+  }
+}

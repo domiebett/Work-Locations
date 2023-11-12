@@ -16,9 +16,11 @@ import { ActiveViewService } from './services/active-view.service';
 import { LocationsService } from './services/locations.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationAccordionComponent } from './components/home/list-view/location-accordion/location-accordion.component';
-import { LocationDetailsComponent } from './components/common/location-details/location-details.component';
+import { LocationDetailsComponent } from './components/home/list-view/location-accordion/location-details/location-details.component';
 import { NewLocationModalComponent } from './components/home/new-location-modal/new-location-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { IconSelectComponent } from './components/common/nested-select/icon-select.component';
+import { NestedOptionsComponent } from './components/common/nested-select/nested-options/nested-options.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     LocationAccordionComponent,
     LocationDetailsComponent,
     NewLocationModalComponent,
+    IconSelectComponent,
+    NestedOptionsComponent,
   ],
   imports: [
     BrowserModule,

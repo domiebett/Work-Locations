@@ -19,5 +19,9 @@
     &:focus {
       outline: none;
     }
+
+    &:read-only {
+      cursor: default;
+    }
   }
 }
