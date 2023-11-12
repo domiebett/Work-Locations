@@ -10,6 +10,6 @@ export class ModalService {
   constructor(private matDialog: MatDialog) { }
 
   openNewLocationModal() {
-    this.matDialog.open(NewLocationModalComponent);
+    this.matDialog.open(NewLocationModalComponent, {panelClass: 'visible-overflow'});
   }
 }

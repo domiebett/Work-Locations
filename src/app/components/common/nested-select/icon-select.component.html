@@ -1,6 +1,14 @@
 <div (click)="toggleExpanded()" class="icon-select">
-  <app-icon-input [icon]="locationDot" [placeHolder]="placeholder" [value]="selectedOption" [readonly]="true"></app-icon-input>
+  <app-icon-input
+    [icon]="locationDot"
+    [placeHolder]="placeholder"
+    [value]="selectedOption"
+    [readonly]="true"
+  ></app-icon-input>
   <div *ngIf="expanded" class="options-container">
-    <app-nested-options *ngFor="let option of options"></app-nested-options>
+    <app-nested-options
+      *ngFor="let location of locations"
+      [location]="location"
+    ></app-nested-options>
   </div>
 </div>
