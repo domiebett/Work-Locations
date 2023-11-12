@@ -13,6 +13,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconToggleComponent } from './components/common/icon-toggle/icon-toggle.component';
 import { FormsModule } from '@angular/forms';
 import { ActiveViewService } from './services/active-view.service';
+import { LocationsService } from './services/locations.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LocationAccordionComponent } from './components/home/list-view/location-accordion/location-accordion.component';
+import { LocationDetailsComponent } from './components/home/list-view/location-accordion/location-details/location-details.component';
+import { NewLocationModalComponent } from './components/home/new-location-modal/new-location-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { IconSelectComponent } from './components/common/nested-select/icon-select.component';
+import { NestedOptionsComponent } from './components/common/nested-select/nested-options/nested-options.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +33,20 @@ import { ActiveViewService } from './services/active-view.service';
     ActionBarComponent,
     IconInputComponent,
     IconToggleComponent,
+    LocationAccordionComponent,
+    LocationDetailsComponent,
+    NewLocationModalComponent,
+    IconSelectComponent,
+    NestedOptionsComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, FormsModule],
-  providers: [ActiveViewService],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule,
+    MatDialogModule,
+  ],
+  providers: [ActiveViewService, LocationsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

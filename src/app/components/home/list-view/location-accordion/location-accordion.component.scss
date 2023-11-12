@@ -1,0 +1,16 @@
+.location-accordion {
+  padding: 10px 15px;
+  border: 1px solid #e7e8eb;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  cursor: pointer;
+
+  &.expanded {
+    background-color: #f9fafc;
+  }
+
+  &:not(.top-level) {
+    margin-left: 10px;
+  }
+}

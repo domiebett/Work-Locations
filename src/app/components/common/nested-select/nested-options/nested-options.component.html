@@ -1,0 +1,13 @@
+<div *ngIf="location.locations" class="nested-option">
+  <span (click)="onClick()" class="option">{{ location.name }}</span>
+
+  <div
+    *ngIf="location.locations && location.locations.length > 0"
+    class="options"
+  >
+    <app-nested-options
+      *ngFor="let location of location.locations"
+      [location]="location"
+    ></app-nested-options>
+  </div>
+</div>

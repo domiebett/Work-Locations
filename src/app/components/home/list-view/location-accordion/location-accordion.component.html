@@ -1,0 +1,23 @@
+<div
+  (click)="toggleActiveState($event)"
+  [ngClass]="{
+    'location-accordion': true,
+    expanded: isExpanded(),
+    'top-level': isTopLevel
+  }"
+  [draggable]="true"
+>
+  <app-location-details
+    *ngIf="location.name"
+    [location]="location"
+    [expanded]="isExpanded()"
+  ></app-location-details>
+
+  <div *ngIf="hasLocations() && isExpanded()" class="child-locations">
+    <app-location-accordion
+      *ngFor="let loc of location.locations; let i = index"
+      [location]="loc"
+    >
+    </app-location-accordion>
+  </div>
+</div>

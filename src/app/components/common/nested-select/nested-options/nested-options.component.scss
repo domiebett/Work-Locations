@@ -1,0 +1,15 @@
+.nested-option {
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-left: 15px;
+  padding: 2px;
+
+  .option {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: #dfe2e8;
+    }
+  }
+}

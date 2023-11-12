@@ -1,1 +1,7 @@
-<p>list-view works!</p>
+<div class="list-view">
+  <app-location-accordion
+    *ngFor="let location of locations"
+    [location]="location"
+    [isTopLevel]="true"
+  ></app-location-accordion>
+</div>

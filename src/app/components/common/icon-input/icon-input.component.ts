@@ -10,4 +10,6 @@ export class IconInputComponent {
   @Input() icon?: IconDefinition;
   @Input() name!: string;
   @Input() placeHolder: string = 'Enter text';
+  @Input() value: string = '';
+  @Input() readonly: boolean = false;
 }

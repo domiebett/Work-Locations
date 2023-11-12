@@ -2,14 +2,17 @@
   border: none;
   padding: 0.9em 3em;
   border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+
   &.primary {
     background-color: #257490;
     color: white;
   }
   &.default {
     background-color: white;
-    border: 1px solid #f7f7f7;
-    color: #aeafb1;
+    border: 1px solid #aeafb1;
+    color: #68758d;
   }
   &.danger {
     background-color: #e61d1c;

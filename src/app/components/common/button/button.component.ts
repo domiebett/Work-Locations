@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BtnType } from 'src/app/types/button';
 
 @Component({
@@ -9,4 +9,9 @@ import { BtnType } from 'src/app/types/button';
 export class ButtonComponent {
   @Input() text!: string;
   @Input() type!: BtnType;
+  @Output() click = new EventEmitter();
+
+  onClick() {
+    this.click.emit();
+  }
 }

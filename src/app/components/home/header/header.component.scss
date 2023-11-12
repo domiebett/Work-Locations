@@ -3,13 +3,16 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  width: 100vw;
-  padding: 20px;
+  width: 100%;
+  padding: 20px 0;
   vertical-align: top;
+  border-bottom: 1px solid #e7e8eb;
 
   .title-bar {
     .name {
       font-size: 1.5em;
+      padding: 0;
+      margin: 0;
     }
   }
 
