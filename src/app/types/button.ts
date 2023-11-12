@@ -1,1 +1,1 @@
-export type BtnType = 'primary' | 'default' | 'danger';
+export type BtnTheme = 'primary' | 'default' | 'danger';

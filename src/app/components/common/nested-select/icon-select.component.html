@@ -2,8 +2,10 @@
   <app-icon-input
     [icon]="locationDot"
     [placeHolder]="placeholder"
-    [value]="selectedOption"
+    [value]="selectedOption?.name ?? ''"
     [readonly]="true"
+    [name]="name"
+    [form]="form"
   ></app-icon-input>
   <div *ngIf="expanded" class="options-container">
     <app-nested-options

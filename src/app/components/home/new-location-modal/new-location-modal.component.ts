@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import {
   faGripLines,
@@ -14,11 +15,25 @@ import { LocationsService } from 'src/app/services/locations.service';
 })
 export class NewLocationModalComponent implements OnInit {
   locations!: any[];
+  form!: FormGroup;
 
-  constructor(private locationsService: LocationsService, private matDialog: MatDialog) {}
+  constructor(
+    private locationsService: LocationsService,
+    private matDialog: MatDialog,
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
     this.locations = this.locationsService.getLocations();
+    this.form = this.formBuilder.group({
+      name: ['', Validators.required],
+      shortName: [''],
+      parentLocation: [''],
+    });
+  }
+
+  onSubmit(): void {
+    console.log('form value', this.form.value);
   }
 
   onClose(): void {
