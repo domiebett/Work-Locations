@@ -1,72 +1,62 @@
 {
   "locations": [
     {
-      "name": "New York",
-      "shortName": "NY",
+      "name": "United States",
+      "shortName": "US",
       "locations": [
         {
-          "name": "Brooklyn",
-          "shortName": "BK",
+          "name": "New York",
+          "shortName": "NY",
           "locations": [
             {
-              "name": "Williamsburg",
-              "shortName": "WB",
-              "locations": []
+              "name": "Office 1",
+              "shortName": "O1",
+              "occupants": 50
             },
             {
-              "name": "Downtown Brooklyn",
-              "shortName": "DB",
-              "locations": []
+              "name": "Office 2",
+              "shortName": "O2",
+              "occupants": 30
             }
           ]
         },
         {
-          "name": "Manhattan",
-          "shortName": "MH",
+          "name": "San Francisco",
+          "shortName": "SF",
           "locations": [
             {
-              "name": "Upper East Side",
-              "shortName": "UES",
-              "locations": []
+              "name": "Office A",
+              "shortName": "OA",
+              "occupants": 25
             },
             {
-              "name": "Chelsea",
-              "shortName": "CH",
-              "locations": []
+              "name": "Office B",
+              "shortName": "OB",
+              "occupants": 40
             }
           ]
         }
       ]
     },
     {
-      "name": "London",
-      "shortName": "LDN",
+      "name": "United Kingdom",
+      "shortName": "UK",
       "locations": [
         {
-          "name": "Westminster",
-          "shortName": "WSM",
-          "locations": []
-        },
-        {
-          "name": "Camden",
-          "shortName": "CMD",
-          "locations": []
-        }
-      ]
-    },
-    {
-      "name": "Tokyo",
-      "shortName": "TKY",
-      "locations": [
-        {
-          "name": "Shinjuku",
-          "shortName": "SKJ",
-          "locations": []
-        },
-        {
-          "name": "Shibuya",
-          "shortName": "SBY",
-          "locations": []
+          "name": "London",
+          "shortName": "LDN",
+          "locations": [
+            {
+              "name": "Office X",
+              "shortName": "OX",
+              "occupants": 35
+            },
+            {
+              "name": "Office Y",
+              "shortName": "OY",
+              "occupants": 20
+            }
+          ]
         }
       ]
     }

@@ -1,0 +1,21 @@
+<div class="location-details">
+  <div *ngIf="hasLocations()" class="accordion-actions">
+    <span *ngIf="!expanded" class="action expand">
+      <fa-icon [icon]="chevronUp"></fa-icon>
+      <fa-icon [icon]="chevronDown"></fa-icon>
+    </span>
+    <span *ngIf="expanded" class="action collapse">
+      <fa-icon [icon]="chevronDown"></fa-icon>
+      <fa-icon [icon]="chevronUp"></fa-icon>
+    </span>
+  </div>
+  <div class="icon"><fa-icon [icon]="city"></fa-icon></div>
+  <div class="name">
+    <strong>{{ location.name }}</strong>
+  </div>
+  <div class="info">
+    <span class="offices"><fa-icon [icon]="office"></fa-icon> 1</span>
+    <span class="people"><fa-icon [icon]="people"></fa-icon> 3</span>
+    <span class="person"><fa-icon [icon]="person"></fa-icon> 5</span>
+  </div>
+</div>

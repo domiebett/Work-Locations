@@ -8,4 +8,17 @@ import { Location } from 'src/app/types/location';
 })
 export class LocationAccordionComponent {
   @Input() location!: Location;
+
+  expanded: boolean = false;
+
+  toggleActiveState(event: Event) {
+    event.stopPropagation();
+    if (this.hasLocations()) {
+      this.expanded = !this.expanded;
+    }
+  }
+
+  hasLocations(): boolean {
+    return this.location.locations && this.location.locations.length > 0;
+  }
 }

@@ -1,8 +1,19 @@
-<div class="location-accordion">
-  <span>Name: {{ location.name }}</span>
-  <span>Short Name: {{ location.shortName }}</span>
-  <div *ngIf="location.locations.length" class="child-locations">
-    <app-location-accordion *ngFor="let loc of location.locations" [location]="loc">
+<div
+  (click)="toggleActiveState($event)"
+  class="location-accordion"
+  [ngClass]="{ 'location-accordion': true, expanded }"
+  draggable="true"
+>
+  <app-location-details
+    [location]="location"
+    [expanded]="expanded"
+  ></app-location-details>
+
+  <div *ngIf="hasLocations() && expanded" class="child-locations">
+    <app-location-accordion
+      *ngFor="let loc of location.locations"
+      [location]="loc"
+    >
     </app-location-accordion>
   </div>
 </div>

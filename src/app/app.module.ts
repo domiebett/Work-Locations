@@ -16,6 +16,7 @@ import { ActiveViewService } from './services/active-view.service';
 import { LocationsService } from './services/locations.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationAccordionComponent } from './components/home/list-view/location-accordion/location-accordion.component';
+import { LocationDetailsComponent } from './components/common/location-details/location-details.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { LocationAccordionComponent } from './components/home/list-view/location
     IconInputComponent,
     IconToggleComponent,
     LocationAccordionComponent,
+    LocationDetailsComponent,
   ],
   imports: [BrowserModule, FontAwesomeModule, FormsModule, HttpClientModule],
   providers: [ActiveViewService, LocationsService],
