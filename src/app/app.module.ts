@@ -17,6 +17,8 @@ import { LocationsService } from './services/locations.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationAccordionComponent } from './components/home/list-view/location-accordion/location-accordion.component';
 import { LocationDetailsComponent } from './components/common/location-details/location-details.component';
+import { NewLocationModalComponent } from './components/home/new-location-modal/new-location-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,15 @@ import { LocationDetailsComponent } from './components/common/location-details/l
     IconToggleComponent,
     LocationAccordionComponent,
     LocationDetailsComponent,
+    NewLocationModalComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule,
+    MatDialogModule,
+  ],
   providers: [ActiveViewService, LocationsService],
   bootstrap: [AppComponent],
 })

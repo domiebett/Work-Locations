@@ -1,13 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Location } from 'src/app/types/location';
 
 @Component({
   selector: 'app-location-accordion',
   templateUrl: './location-accordion.component.html',
-  styleUrls: ['./location-accordion.component.scss']
+  styleUrls: ['./location-accordion.component.scss'],
 })
 export class LocationAccordionComponent {
   @Input() location!: Location;
+  @Input() isTopLevel: boolean = false;
+  @Output() dragstart = new EventEmitter<DragEvent>();
+  @Output() dragover = new EventEmitter<DragEvent>();
 
   expanded: boolean = false;
 
@@ -20,5 +23,9 @@ export class LocationAccordionComponent {
 
   hasLocations(): boolean {
     return this.location.locations && this.location.locations.length > 0;
+  }
+
+  isExpanded(): boolean {
+    return this.hasLocations() && (this.expanded);
   }
 }
