@@ -18,9 +18,7 @@ export class NewLocationModalComponent implements OnInit {
   constructor(private locationsService: LocationsService, private matDialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.locationsService.getLocations().subscribe((data) => {
-      this.locations = data.locations;
-    });
+    this.locations = this.locationsService.getLocations();
   }
 
   onClose(): void {

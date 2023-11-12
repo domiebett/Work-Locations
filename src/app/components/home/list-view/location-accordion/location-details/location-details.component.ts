@@ -20,6 +20,6 @@ export class LocationDetailsComponent {
   office = faHouseChimneyUser;
 
   hasLocations(): boolean {
-    return this.location.locations && this.location.locations.length > 0;
+    return !!this.location.locations && this.location.locations.length > 0;
   }
 }

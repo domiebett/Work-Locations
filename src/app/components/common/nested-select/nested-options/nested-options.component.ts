@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SelectOptionService } from 'src/app/services/select-option.service';
-import { Location } from 'src/app/types/location';
+import { LocationNode } from 'src/app/utils/location-node';
 
 @Component({
   selector: 'app-nested-options',
@@ -8,7 +8,7 @@ import { Location } from 'src/app/types/location';
   styleUrls: ['./nested-options.component.scss']
 })
 export class NestedOptionsComponent {
-  @Input() location!: Location;
+  @Input() location!: LocationNode;
 
   constructor(private selectOptionService: SelectOptionService) {}
 
