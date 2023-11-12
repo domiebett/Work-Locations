@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {
   faGripLines,
   faUser,
@@ -14,12 +15,16 @@ import { LocationsService } from 'src/app/services/locations.service';
 export class NewLocationModalComponent implements OnInit {
   locations!: any[];
 
-  constructor(private locationsService: LocationsService) {}
+  constructor(private locationsService: LocationsService, private matDialog: MatDialog) {}
 
   ngOnInit(): void {
     this.locationsService.getLocations().subscribe((data) => {
       this.locations = data.locations;
     });
+  }
+
+  onClose(): void {
+    this.matDialog.closeAll();
   }
 
   xmark = faXmark;
