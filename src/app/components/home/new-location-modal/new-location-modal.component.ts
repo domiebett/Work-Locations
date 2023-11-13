@@ -6,10 +6,9 @@ import {
   faUser,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
-import { LocationsService } from 'src/app/services/locations.service';
+import { LocationNode, LocationsService } from 'src/app/services/locations.service';
 import { SelectOptionService } from 'src/app/services/select-option.service';
 import { LocationType } from 'src/app/types/location';
-import { LocationNode } from 'src/app/utils/location-node';
 
 @Component({
   selector: 'app-new-location-modal',

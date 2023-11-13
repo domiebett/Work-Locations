@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LocationNode } from 'src/app/services/locations.service';
 import { SelectOptionService } from 'src/app/services/select-option.service';
-import { LocationNode } from 'src/app/utils/location-node';
 
 @Component({
   selector: 'app-nested-options',

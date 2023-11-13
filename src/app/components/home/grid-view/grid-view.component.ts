@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { LocationsService } from 'src/app/services/locations.service';
-import { LocationNode } from 'src/app/utils/location-node';
+import { Component, OnInit } from '@angular/core';
+import {
+  LocationNode,
+  LocationsService,
+} from 'src/app/services/locations.service';
 
 @Component({
   selector: 'app-grid-view',
@@ -23,7 +25,10 @@ export class GridViewComponent implements OnInit {
       : this.locations;
   }
 
-  setSelectedLocation(location: LocationNode): void {
-    this.selectedLocation = location;
+  setSelectedLocation(location: LocationNode | null): void {
+    const hasLocations = location?.locations && location.locations.length > 0
+    if (hasLocations || location === null) {
+      this.selectedLocation = location;
+    }
   }
 }

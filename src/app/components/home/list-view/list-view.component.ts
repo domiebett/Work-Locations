@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocationsService } from 'src/app/services/locations.service';
-import { LocationNode } from 'src/app/utils/location-node';
+import { LocationNode, LocationsService } from 'src/app/services/locations.service';
 
 @Component({
   selector: 'app-list-view',

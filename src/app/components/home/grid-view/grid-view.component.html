@@ -1,5 +1,9 @@
 <div class="grid-view">
-  <div class="breadcrubms"></div>
+  <app-breadcrumbs
+    [selectedLocation]="selectedLocation"
+    (crumbClick)="setSelectedLocation($event)"
+  ></app-breadcrumbs>
+
   <div class="grid-container">
     <app-grid-card
       *ngFor="let location of getActiveLocations()"

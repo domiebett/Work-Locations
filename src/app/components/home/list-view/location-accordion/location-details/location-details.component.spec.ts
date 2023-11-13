@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LocationNode } from 'src/app/utils/location-node';
 import { LocationType } from 'src/app/types/location';
 import { LocationDetailsComponent } from './location-details.component';
+import { LocationNode } from 'src/app/services/locations.service';
 
 describe('LocationDetailsComponent', () => {
   let component: LocationDetailsComponent;

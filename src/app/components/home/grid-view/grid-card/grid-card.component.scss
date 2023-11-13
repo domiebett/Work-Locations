@@ -11,10 +11,15 @@
   gap: 20px;
   border-radius: 6px;
   cursor: pointer;
+  
+  &.leaf-node {
+    cursor: default;
+  }
 
-  &:hover {
+  &:not(.leaf-node):hover {
     background-color: #f3f3f3;
   }
+
 
   .icon {
     display: flex;

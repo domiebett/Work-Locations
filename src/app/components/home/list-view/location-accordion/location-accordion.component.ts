@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { LocationNode } from 'src/app/utils/location-node';
+import { LocationNode } from 'src/app/services/locations.service';
 
 @Component({
   selector: 'app-location-accordion',
@@ -26,6 +26,6 @@ export class LocationAccordionComponent {
   }
 
   isExpanded(): boolean {
-    return this.hasLocations() && (this.expanded);
+    return this.hasLocations() && this.expanded;
   }
 }

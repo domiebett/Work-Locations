@@ -4,7 +4,7 @@ import {
   faChevronUp,
   faCity,
 } from '@fortawesome/free-solid-svg-icons';
-import { LocationNode } from 'src/app/utils/location-node';
+import { LocationNode } from 'src/app/services/locations.service';
 
 @Component({
   selector: 'app-location-details',

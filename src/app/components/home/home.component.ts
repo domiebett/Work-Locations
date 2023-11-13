@@ -8,7 +8,7 @@ import { LocationView } from 'src/app/types/view';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  activeView: LocationView = 'grid';
+  activeView: LocationView = 'list';
 
   constructor(private activeViewService: ActiveViewService) {}
 

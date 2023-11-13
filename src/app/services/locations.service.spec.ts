@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { LocationsService } from './locations.service';
-import { LocationNode } from '../utils/location-node';
+import { LocationNode, LocationsService } from './locations.service';
 import { LocationType } from '../types/location';
 
 describe('LocationsService', () => {

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { SelectOptionService } from './select-option.service';
-import { LocationNode } from '../utils/location-node';
 import { LocationType } from '../types/location';
+import { LocationNode } from './locations.service';
 
 describe('SelectOptionService', () => {
   let selectOptionService: SelectOptionService;

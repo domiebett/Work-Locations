@@ -8,8 +8,8 @@ import {
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { LocationNode } from 'src/app/services/locations.service';
 import { SelectOptionService } from 'src/app/services/select-option.service';
-import { LocationNode } from 'src/app/utils/location-node';
 
 @Component({
   selector: 'app-icon-select',

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faChevronRight, faCity } from '@fortawesome/free-solid-svg-icons';
-import { LocationNode } from 'src/app/utils/location-node';
+import { LocationNode } from 'src/app/services/locations.service';
 
 @Component({
   selector: 'app-grid-card',
@@ -17,5 +17,9 @@ export class GridCardComponent {
 
   onClick(): void {
     this.click.emit(this.location);
+  }
+
+  hasLocations(): boolean {
+    return this.location?.locations && this.location.locations.length > 0;
   }
 }

@@ -1,4 +1,7 @@
-<div class="grid-card" (click)="onClick()">
+<div
+  [ngClass]="{ 'grid-card': true, 'leaf-node': !hasLocations() }"
+  (click)="onClick()"
+>
   <div class="icon">
     <div class="icon">
       <fa-icon [icon]="city"></fa-icon>
@@ -9,10 +12,7 @@
     <app-location-stats></app-location-stats>
   </div>
 
-  <div
-    *ngIf="location.locations && location.locations.length > 0"
-    class="expandable-indicator"
-  >
+  <div *ngIf="hasLocations()" class="expandable-indicator">
     <fa-icon [icon]="rightChevron"></fa-icon>
   </div>
 </div>

@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LocationNode } from 'src/app/utils/location-node';
 import { LocationAccordionComponent } from './location-accordion.component';
 import { LocationType } from 'src/app/types/location';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LocationNode } from 'src/app/services/locations.service';
 
 describe('LocationAccordionComponent', () => {
   let component: LocationAccordionComponent;

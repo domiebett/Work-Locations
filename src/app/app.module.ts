@@ -24,6 +24,7 @@ import { LocationsService } from './services/locations.service';
 import { ActiveViewService } from './services/active-view.service';
 import { GridCardComponent } from './components/home/grid-view/grid-card/grid-card.component';
 import { LocationStatsComponent } from './components/common/location-stats/location-stats.component';
+import { BreadcrumbsComponent } from './components/grid-view/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { LocationStatsComponent } from './components/common/location-stats/locat
     LocationAccordionComponent,
     GridCardComponent,
     LocationStatsComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     FormsModule,
