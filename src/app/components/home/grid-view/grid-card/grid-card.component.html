@@ -1,0 +1,18 @@
+<div class="grid-card">
+  <div class="icon">
+    <div class="icon">
+      <fa-icon [icon]="city"></fa-icon>
+    </div>
+  </div>
+  <div class="location-details">
+    <div class="name">{{ location.name }}</div>
+    <app-location-stats></app-location-stats>
+  </div>
+
+  <div
+    *ngIf="location.locations && location.locations.length > 0"
+    class="expandable-indicator"
+  >
+    <fa-icon [icon]="rightChevron"></fa-icon>
+  </div>
+</div>

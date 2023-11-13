@@ -22,6 +22,8 @@ import { LocationDetailsComponent } from './components/home/list-view/location-a
 
 import { LocationsService } from './services/locations.service';
 import { ActiveViewService } from './services/active-view.service';
+import { GridCardComponent } from './components/home/grid-view/grid-card/grid-card.component';
+import { LocationStatsComponent } from './components/common/location-stats/location-stats.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ActiveViewService } from './services/active-view.service';
     LocationDetailsComponent,
     NewLocationModalComponent,
     LocationAccordionComponent,
+    GridCardComponent,
+    LocationStatsComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,21 @@
+.location-stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  font-size: 12px;
+  max-width: 100px;
+
+  .offices {
+    color: #9494f4;
+  }
+
+  .people {
+    color: #f1b546;
+  }
+
+  .person {
+    color: #a8d962;
+  }
+}

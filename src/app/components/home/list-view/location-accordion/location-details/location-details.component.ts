@@ -3,9 +3,6 @@ import {
   faChevronDown,
   faChevronUp,
   faCity,
-  faHouseChimneyUser,
-  faPeopleGroup,
-  faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { LocationNode } from 'src/app/utils/location-node';
 
@@ -22,9 +19,6 @@ export class LocationDetailsComponent {
   chevronUp = faChevronUp;
   chevronDown = faChevronDown;
   city = faCity;
-  people = faPeopleGroup;
-  person = faUser;
-  office = faHouseChimneyUser;
 
   hasLocations(): boolean {
     return !!this.location.locations && this.location.locations.length > 0;

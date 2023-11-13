@@ -1,1 +1,6 @@
-<p>grid view coming soon</p>
+<div class="grid-view">
+  <div class="breadcrubms"></div>
+  <div class="grid-container">
+    <app-grid-card *ngFor="let location of locations" [location]="location"></app-grid-card>
+  </div>
+</div>
