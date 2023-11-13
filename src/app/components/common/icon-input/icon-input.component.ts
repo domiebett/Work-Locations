@@ -14,4 +14,8 @@ export class IconInputComponent {
   @Input() value: string = '';
   @Input() readonly: boolean = false;
   @Input() form!: FormGroup;
+
+  get inputControl() {
+    return this.form.get(this.name);
+  }
 }

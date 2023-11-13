@@ -5,9 +5,17 @@
   cursor: pointer;
   font-weight: bold;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   &.primary {
     background-color: #257490;
     color: white;
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
   &.default {
     background-color: white;

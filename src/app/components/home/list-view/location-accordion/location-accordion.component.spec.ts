@@ -4,6 +4,7 @@ import { LocationType } from 'src/app/types/location';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LocationNode } from 'src/app/services/locations.service';
+import { LocationStatsComponent } from 'src/app/components/common/location-stats/location-stats.component';
 
 describe('LocationAccordionComponent', () => {
   let component: LocationAccordionComponent;
@@ -11,7 +12,7 @@ describe('LocationAccordionComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LocationAccordionComponent, LocationDetailsComponent],
+      declarations: [LocationAccordionComponent, LocationDetailsComponent, LocationStatsComponent],
       imports: [FontAwesomeModule]
     });
 

@@ -12,6 +12,7 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { LocationDetailsComponent } from './list-view/location-accordion/location-details/location-details.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocationStatsComponent } from '../common/location-stats/location-stats.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -29,6 +30,7 @@ describe('HomeComponent', () => {
         ButtonComponent,
         ListViewComponent,
         LocationDetailsComponent,
+        LocationStatsComponent,
       ],
       imports: [
         MatDialogModule,

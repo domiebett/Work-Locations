@@ -31,6 +31,6 @@
 
   <div class="modal-section footer">
     <app-button (click)="onClose()" text="CANCEL" theme="default"></app-button>
-    <app-button text="SAVE" theme="primary" type="submit"></app-button>
+    <app-button text="SAVE" theme="primary" type="submit" [disabled]="form.invalid"></app-button>
   </div>
 </form>

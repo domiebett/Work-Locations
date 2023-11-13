@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LocationStatsComponent } from './location-stats.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('LocationStatsComponent', () => {
   let component: LocationStatsComponent;
@@ -8,7 +9,8 @@ describe('LocationStatsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LocationStatsComponent]
+      declarations: [LocationStatsComponent],
+      imports: [FontAwesomeModule]
     });
     fixture = TestBed.createComponent(LocationStatsComponent);
     component = fixture.componentInstance;

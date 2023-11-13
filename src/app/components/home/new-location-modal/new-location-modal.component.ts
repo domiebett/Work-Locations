@@ -6,7 +6,10 @@ import {
   faUser,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
-import { LocationNode, LocationsService } from 'src/app/services/locations.service';
+import {
+  LocationNode,
+  LocationsService,
+} from 'src/app/services/locations.service';
 import { SelectOptionService } from 'src/app/services/select-option.service';
 import { LocationType } from 'src/app/types/location';
 
@@ -47,7 +50,25 @@ export class NewLocationModalComponent implements OnInit {
   }
 
   onSubmit(): void {
+    if (this.form.invalid) {
+      return;
+    }
+
     const { name, shortName } = this.form.value;
+    let type: LocationType = this.getLocationType(this.parentLocation);
+
+    const newLocation = new LocationNode(
+      name,
+      type,
+      shortName,
+      this.parentLocation
+    );
+    this.locationsService.addLocation(newLocation, this.parentLocation);
+
+    this.matDialog.closeAll();
+  }
+
+  getLocationType(parentLocation: LocationNode): LocationType {
     let type: LocationType;
 
     if (this.parentLocation) {
@@ -59,10 +80,13 @@ export class NewLocationModalComponent implements OnInit {
       type = LocationType.Country;
     }
 
-    const newLocation = new LocationNode(name, type, shortName);
-    this.locationsService.addLocation(newLocation, this.parentLocation);
+    return type;
+  }
 
-    this.matDialog.closeAll();
+  markControlsTouched(): void {
+    Object.values(this.form.controls).forEach(
+      (control) => control.markAsTouched
+    );
   }
 
   onClose(): void {

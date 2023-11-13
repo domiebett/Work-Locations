@@ -10,12 +10,17 @@
   border: 1px solid #eef1f6;
   padding: 0 10px;
 
+  &.validation-error {
+    border: 1px solid #e61d1c;
+  }
+
   input {
     height: 100%;
     width: calc(100% - 30px);
     border: none;
     outline: none;
     font-size: 15px;
+
     &:focus {
       outline: none;
     }

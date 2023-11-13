@@ -3,6 +3,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LocationType } from 'src/app/types/location';
 import { LocationDetailsComponent } from './location-details.component';
 import { LocationNode } from 'src/app/services/locations.service';
+import { LocationStatsComponent } from 'src/app/components/common/location-stats/location-stats.component';
 
 describe('LocationDetailsComponent', () => {
   let component: LocationDetailsComponent;
@@ -10,7 +11,7 @@ describe('LocationDetailsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LocationDetailsComponent],
+      declarations: [LocationDetailsComponent, LocationStatsComponent],
       imports: [FontAwesomeModule],
     });
 
@@ -37,9 +38,6 @@ describe('LocationDetailsComponent', () => {
     expect(component.chevronUp).toBeDefined();
     expect(component.chevronDown).toBeDefined();
     expect(component.city).toBeDefined();
-    expect(component.people).toBeDefined();
-    expect(component.person).toBeDefined();
-    expect(component.office).toBeDefined();
   });
 
   it('should return true for hasLocations when locations are present', () => {

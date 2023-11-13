@@ -56,7 +56,7 @@ describe('LocationsService', () => {
   });
 
   describe('convertLocationsToTree', () => {
-    it('should convert flat locations array to a tree structure', () => {
+    it('should convert locations array to a tree structure', () => {
       const tree = service.convertLocationsToTree();
 
       // Customize this assertion based on your expected tree structure
