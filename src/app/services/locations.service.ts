@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LocationNode } from '../utils/location-node';
 import { locations as locationsStorage } from '../utils/locations';
@@ -9,14 +8,16 @@ import { locations as locationsStorage } from '../utils/locations';
 export class LocationsService {
   private locations: LocationNode[] = this.convertLocationsToTree();
 
-  constructor(private http: HttpClient) {}
-
   getLocations() {
     return this.locations;
   }
 
-  addLocation(parent: LocationNode, newLocation: LocationNode): void {
-    parent.locations.push(newLocation);
+  addLocation(newLocation: LocationNode, parent: LocationNode | null): void {
+    if (parent) {
+      parent.locations.push(newLocation);
+    } else {
+      this.locations.push(newLocation);
+    }
   }
 
   convertLocationsToTree(): LocationNode[] {

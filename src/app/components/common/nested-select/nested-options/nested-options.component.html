@@ -1,4 +1,4 @@
-<div *ngIf="location.type !== 'office'" class="nested-option">
+<div *ngIf="location?.type !== 'office'" class="nested-option">
   <span (click)="onClick()" class="option">{{ location.name }}</span>
 
   <div

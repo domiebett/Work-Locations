@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Location } from 'src/app/types/location';
 import { LocationNode } from 'src/app/utils/location-node';
 
 @Component({

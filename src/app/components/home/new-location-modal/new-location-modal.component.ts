@@ -7,6 +7,9 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { LocationsService } from 'src/app/services/locations.service';
+import { SelectOptionService } from 'src/app/services/select-option.service';
+import { LocationType } from 'src/app/types/location';
+import { LocationNode } from 'src/app/utils/location-node';
 
 @Component({
   selector: 'app-new-location-modal',
@@ -16,11 +19,17 @@ import { LocationsService } from 'src/app/services/locations.service';
 export class NewLocationModalComponent implements OnInit {
   locations!: any[];
   form!: FormGroup;
+  parentLocation!: LocationNode;
+
+  xmark = faXmark;
+  user = faUser;
+  lines = faGripLines;
 
   constructor(
     private locationsService: LocationsService,
     private matDialog: MatDialog,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private selectOption: SelectOptionService
   ) {}
 
   ngOnInit(): void {
@@ -30,17 +39,34 @@ export class NewLocationModalComponent implements OnInit {
       shortName: [''],
       parentLocation: [''],
     });
+
+    this.selectOption.selectedOption$.subscribe(
+      (selectedLocation: LocationNode) => {
+        this.parentLocation = selectedLocation;
+      }
+    );
   }
 
   onSubmit(): void {
-    console.log('form value', this.form.value);
+    const { name, shortName } = this.form.value;
+    let type: LocationType;
+
+    if (this.parentLocation) {
+      type =
+        this.parentLocation.type === LocationType.Country
+          ? LocationType.City
+          : LocationType.Office;
+    } else {
+      type = LocationType.Country;
+    }
+
+    const newLocation = new LocationNode(name, type, shortName);
+    this.locationsService.addLocation(newLocation, this.parentLocation);
+
+    this.matDialog.closeAll();
   }
 
   onClose(): void {
     this.matDialog.closeAll();
   }
-
-  xmark = faXmark;
-  user = faUser;
-  lines = faGripLines;
 }

@@ -16,7 +16,7 @@ import { LocationNode } from 'src/app/utils/location-node';
   templateUrl: './icon-select.component.html',
   styleUrls: ['./icon-select.component.scss'],
 })
-export class IconSelectComponent implements OnInit {
+export class IconSelectComponent implements OnInit, OnDestroy {
   @Input() locations!: any[];
   @Input() name!: string;
   @Input() form!: FormGroup;
@@ -39,9 +39,15 @@ export class IconSelectComponent implements OnInit {
       this.form.patchValue({
         [this.name]: this.selectedOption?.name ?? '',
       });
+
       // close the dropdown
       this.expanded = false;
     });
+  }
+
+  ngOnDestroy(): void {
+    this.form.reset();
+    this.selectOptionService.resetSelection();
   }
 
   @HostListener('document:click', ['$event'])
