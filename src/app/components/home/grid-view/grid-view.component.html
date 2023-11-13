@@ -1,6 +1,10 @@
 <div class="grid-view">
   <div class="breadcrubms"></div>
   <div class="grid-container">
-    <app-grid-card *ngFor="let location of locations" [location]="location"></app-grid-card>
+    <app-grid-card
+      *ngFor="let location of getActiveLocations()"
+      [location]="location"
+      (click)="setSelectedLocation($event)"
+    ></app-grid-card>
   </div>
 </div>
