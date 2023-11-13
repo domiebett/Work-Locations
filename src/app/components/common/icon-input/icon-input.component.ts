@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -12,4 +13,9 @@ export class IconInputComponent {
   @Input() placeHolder: string = 'Enter text';
   @Input() value: string = '';
   @Input() readonly: boolean = false;
+  @Input() form!: FormGroup;
+
+  get inputControl() {
+    return this.form.get(this.name);
+  }
 }

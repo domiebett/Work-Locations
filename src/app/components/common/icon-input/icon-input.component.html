@@ -1,4 +1,21 @@
-<label [htmlFor]="name" class="text-input">
+<label
+  [formGroup]="form"
+  [htmlFor]="name"
+  [ngClass]="{
+    'text-input': true,
+    'validation-error':
+      inputControl?.hasError('required') &&
+      (inputControl?.dirty || inputControl?.touched)
+  }"
+>
   <fa-icon *ngIf="icon" [icon]="icon"></fa-icon>
-  <input type="text" [name]="name" [id]="name" [placeholder]="placeHolder" [readOnly]="readonly" [value]="value"/>
+  <input
+    type="text"
+    [name]="name"
+    [id]="name"
+    [placeholder]="placeHolder"
+    [readOnly]="readonly"
+    [value]="value"
+    [formControlName]="name"
+  />
 </label>

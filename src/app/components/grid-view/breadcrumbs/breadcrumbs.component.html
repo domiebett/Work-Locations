@@ -1,0 +1,8 @@
+<div class="breadcrumbs">
+  <span class="crumb"><button (click)="onCrumbClick(null)" class="name">All locations</button></span>
+
+  <span *ngFor="let location of locationCrumbs" class="crumb">
+    <span class="chevron"><fa-icon [icon]="rightChevron"></fa-icon></span>
+    <button (click)="onCrumbClick(location)" class="name">{{ location.name }}</button>
+  </span>
+</div>

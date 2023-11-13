@@ -1,1 +1,14 @@
-<p>grid view coming soon</p>
+<div class="grid-view">
+  <app-breadcrumbs
+    [selectedLocation]="selectedLocation"
+    (crumbClick)="setSelectedLocation($event)"
+  ></app-breadcrumbs>
+
+  <div class="grid-container">
+    <app-grid-card
+      *ngFor="let location of getActiveLocations()"
+      [location]="location"
+      (click)="setSelectedLocation($event)"
+    ></app-grid-card>
+  </div>
+</div>

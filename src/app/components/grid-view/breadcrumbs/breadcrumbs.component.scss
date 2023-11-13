@@ -1,0 +1,30 @@
+.breadcrumbs {
+  margin-bottom: 20px;
+
+  .crumb {
+    color: #9ba9bd;
+    font-weight: 600;
+
+    .chevron {
+      margin: 0 15px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+    
+    &:last-child {
+      color: #000000;
+      margin-right: 0;
+    }
+    
+    button.name {
+      border: none;
+      background: none;
+      outline: none;
+      font-weight: 600;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+}

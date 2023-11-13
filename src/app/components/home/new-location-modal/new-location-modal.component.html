@@ -1,15 +1,36 @@
-<div class="new-location-modal">
+<form (ngSubmit)="onSubmit()" [formGroup]="form" class="new-location-modal">
   <div class="modal-section header">
     <h2 class="title">New work location</h2>
-    <span class="close-btn" (click)="onClose()"><fa-icon [icon]="xmark"></fa-icon></span>
+    <span class="close-btn" (click)="onClose()"
+      ><fa-icon [icon]="xmark"></fa-icon
+    ></span>
   </div>
+
   <div class="modal-section body">
-    <app-icon-input [icon]="user" placeHolder="Name"></app-icon-input>
-    <app-icon-input [icon]="lines" placeHolder="Short name (optional)"></app-icon-input>
-    <app-icon-select [locations]="locations" placeholder="Parent location (Optional)"></app-icon-select>
+    <app-icon-input
+      [icon]="user"
+      placeHolder="Name"
+      name="name"
+      [form]="form"
+    ></app-icon-input>
+
+    <app-icon-input
+      [icon]="lines"
+      placeHolder="Short name (optional)"
+      name="shortName"
+      [form]="form"
+    ></app-icon-input>
+
+    <app-icon-select
+      [locations]="locations"
+      placeholder="Parent location (Optional)"
+      name="parentLocation"
+      [form]="form"
+    ></app-icon-select>
   </div>
+
   <div class="modal-section footer">
-    <app-button (click)="onClose()" text="CANCEL" type="default"></app-button>
-    <app-button text="SAVE" type="primary"></app-button>
+    <app-button (click)="onClose()" text="CANCEL" theme="default"></app-button>
+    <app-button text="SAVE" theme="primary" type="submit" [disabled]="form.invalid"></app-button>
   </div>
-</div>
+</form>

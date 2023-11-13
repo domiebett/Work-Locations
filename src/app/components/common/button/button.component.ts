@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { BtnType } from 'src/app/types/button';
+import { BtnTheme } from 'src/app/types/button';
 
 @Component({
   selector: 'app-button',
@@ -8,7 +8,9 @@ import { BtnType } from 'src/app/types/button';
 })
 export class ButtonComponent {
   @Input() text!: string;
-  @Input() type!: BtnType;
+  @Input() theme!: BtnTheme;
+  @Input() type: string = 'button';
+  @Input() disabled: boolean = false;
   @Output() click = new EventEmitter();
 
   onClick() {

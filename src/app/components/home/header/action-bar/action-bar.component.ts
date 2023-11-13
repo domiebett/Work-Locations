@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import {
   IconDefinition,
   faBarsStaggered,
@@ -15,15 +16,25 @@ import { LocationView } from 'src/app/types/view';
   templateUrl: './action-bar.component.html',
   styleUrls: ['./action-bar.component.scss'],
 })
-export class ActionBarComponent {
+export class ActionBarComponent implements OnInit {
   searchIcon: IconDefinition = faSearch;
   viewToggleOptions: IconToggleOption[] = [
     { name: 'list', icon: faBarsStaggered, defaultChecked: true },
     { name: 'grid', icon: faTableCells },
   ];
+  form!: FormGroup;
 
-  constructor(private activeViewService: ActiveViewService, private modalService: ModalService) {}
+  constructor(
+    private activeViewService: ActiveViewService,
+    private modalService: ModalService,
+    private formBuilder: FormBuilder,
+  ) {}
 
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      search: ['']
+    })
+  }
   setCurrentView(currentView: string): void {
     this.activeViewService.activeViewChanged.emit(currentView as LocationView);
   }

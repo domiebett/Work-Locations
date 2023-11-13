@@ -1,0 +1,10 @@
+.grid-view {
+  margin-top: 20px;
+
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    gap: 25px;
+  }
+}

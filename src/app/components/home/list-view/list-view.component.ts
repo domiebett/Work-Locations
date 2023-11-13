@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocationsService } from 'src/app/services/locations.service';
+import { LocationNode, LocationsService } from 'src/app/services/locations.service';
 
 @Component({
   selector: 'app-list-view',
@@ -7,13 +7,11 @@ import { LocationsService } from 'src/app/services/locations.service';
   styleUrls: ['./list-view.component.scss'],
 })
 export class ListViewComponent implements OnInit {
-  locations!: any[];
+  locations!: LocationNode[];
 
   constructor(private locationsService: LocationsService) {}
 
   ngOnInit(): void {
-    this.locationsService.getLocations().subscribe((data) => {
-      this.locations = data.locations;
-    });
+    this.locations = this.locationsService.getLocations();
   }
 }
